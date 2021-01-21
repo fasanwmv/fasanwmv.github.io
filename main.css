@@ -11,34 +11,31 @@ body {
 	padding: 1rem;
 }
 
-.logo {
-	font-size: 4rem;
+header {
+	font-size: 3rem;
 	padding: 0.5rem;
 	font-style: italic;
 	text-align: center;
 	background-color: #282a2e;
 	border-radius: 2rem;
+	margin-bottom: 5rem;
 }
 
-main {
-	margin: 5rem 0;
+footer {
+	margin-top: 5rem;
+	display: flex;
+	justify-content: space-around;
+	background-color: #282a2e;
+	padding: 0.5rem;
+	border-radius: 1rem;
 }
 
 .advantages {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(6, 1fr);
 	column-gap: 1rem;
 	row-gap: 1rem;
 	padding: 1rem;
-}
-.advantages > .title {
-	grid-column: span 2;
-	font-size: 2rem;
-}
-.advantages > .title img {
-	float: left;
-	margin: 1rem;
-	width: 3rem;
 }
 .advantage {
 	display: flex;
@@ -46,32 +43,61 @@ main {
 	padding: 1rem;
 	border: 0.2rem solid #373b41;
 	border-radius: 1rem;
+	grid-column: span 3;
 }
-.advantage:hover {
-	border-color: #cc6666;
-	background-color: #282a2e;
-	transition-delay: 0.2s;
-	transition-duration: 0.3s;
-	cursor: pointer;
+.advantages > .title {
+	grid-column: span 6;
 }
 .advantage:last-child {
-	grid-column: 1 / span 2;
+	grid-column: 2 / span 4;
 }
-.advantage .title {
+.advantage:hover {
+	background-color: #282a2e;
+}
+.title {
 	display: flex;
 	align-items: center;
+	font-size: 2rem;
+	width: 100%;
 }
 .advantage .title img {
-	width: 3rem;
-	padding: 0.5rem;
-	margin: 1rem;
 	background-color: #cc6666;
 	border-radius: 100%;
 }
-.advantage .title span {
-	font-size: 1.5rem;
+
+img {
+	margin: 1rem;
+	width: 3rem;
+	padding: 0.5rem;
 }
-.advantage .text {
-	text-indent: 4rem;
+
+p {
+	text-indent: 3rem;
 	text-align: justify;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a.button {
+	background-color: #282a2e;
+	font-size: 2rem;
+	margin: 2rem auto 0 auto;
+	padding: 1rem;
+	border: 0.2rem solid #373b41;
+	border-radius: 2rem;
+	display: block;
+	width: 40%;
+	text-align: center;
+}
+a.button:hover {
+	border-color: #cc6666;
+	cursor: pointer;
+}
+a.button:active {
+	background-color: #373b41;
+}
+a.button:focus {
+	outline: none;
 }
